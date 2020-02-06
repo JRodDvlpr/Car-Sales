@@ -45,10 +45,14 @@ export const ReducerCar = (state = initialState, action) => {
 				car: {
 					...state.car,
 					features: state.car.features.filter(
-						feature => feature.id !== action.payload.id
-					)
-				}
-			};
+					feature => feature.id !== action.payload.id)
+				},
+				//adds feature back to list
+				additionalFeatures: [
+                    ...state.additionalFeatures,
+					action.payload
+				]
+			}
 		default:
 			return state;
 	}

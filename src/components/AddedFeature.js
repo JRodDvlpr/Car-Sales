@@ -5,6 +5,8 @@ import {useDispatch} from 'react-redux';
 import {removeFeature} from '../actions/actions';
 
 const AddedFeature = ({feature}) => {
+
+  
   const dispatch = useDispatch();
 
   
